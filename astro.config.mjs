@@ -14,14 +14,14 @@ export default defineConfig({
           label: "Getting Started",
           link: "/getting-started/home",
         },
+        {
+          label: "API Design",
 
+          autogenerate: { directory: "API Design" },
+        },
         {
           label: "Vite",
           autogenerate: { directory: "vite-docs" },
-        },
-        {
-          label: "API Design",
-          autogenerate: { directory: "API Design" },
         },
       ],
     }),
