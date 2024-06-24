@@ -3,48 +3,78 @@ title: URL, Query & Path Parameters
 description: Learn about URLs, query parameters, and path parameters, and how they are used to access resources on the web.
 ---
 
-A URL is the address used to access resources on the web. It consists of several components:
+URL (Uniform Resource Locator) web pe resources ka address hai. Yeh ek specific location identify karta hai jahan resource available hai aur browser ya client ko batata hai ki us resource tak kaise pahunchna hai. URL ke different parts hote hain jo collectively ek complete address banate hain.
 
-- **Scheme**: Specifies the protocol used (e.g., `http://`, `https://`).
-- **Host**: Specifies the domain or IP address of the server (e.g., `www.example.com`).
-- **Port**: Optional; specifies the port number on the server (e.g., `:8080`).
-- **Path**: Specifies the location of a specific resource on the server (e.g., `/products`).
-- **Query Parameters**: Optional; used for passing key-value pairs to a resource (e.g., `?category=electronics&price_range=100-500`).
+### URL Ka Structure
 
-### Query Parameters
+Ek typical URL kuch is tarah ka hota hai:
 
-Query parameters are appended to the end of a URL and start with a question mark (`?`). They are used to pass data to a web server as key-value pairs. Here are some examples:
+```
+https://www.example.com:8080/path/to/resource?query=parameter#fragment
+```
 
-- `https://www.example.com/search?query=api`
-- `https://www.example.com/products?category=electronics&price_range=100-500`
-- `https://www.example.com/users?id=123&name=John&status=active`
+Is URL ko different parts me tod kar samajhte hain:
 
-In these examples:
-- `query=api`, `category=electronics`, `price_range=100-500`, `id=123`, `name=John`, and `status=active` are query parameters.
+1. **Scheme**:
+   - Protocol specify karta hai jo resource tak access karne ke liye use hota hai (jaise `http`, `https`, `ftp`).
+   - Example: `https`
+
+2. **Host**:
+   - Domain name ya IP address jo server ko identify karta hai.
+   - Example: `www.example.com`
+
+3. **Port**:
+   - Optional part jo specific port number specify karta hai jahan server request ko listen kar raha hai.
+   - Example: `8080`
+
+4. **Path**:
+   - Server pe specific resource ka location specify karta hai.
+   - Example: `/path/to/resource`
+
+5. **Query Parameters**:
+   - Additional parameters jo resource retrieve karne ke liye use hote hain.
+   - Example: `?query=parameter`
+
+6. **Fragment**:
+   - Page ke specific section ka reference hota hai.
+   - Example: `#fragment`
 
 ### Path Parameters
 
-Path parameters are segments within the path of a URL that denote specific resources or identifiers. They are typically used in RESTful APIs to specify unique resource identifiers. Here are some examples:
+Path parameters URL path me directly embedded hote hain aur specific resource ko identify karte hain. Yeh typically resource ke location ya type specify karte hain.
 
-- `https://api.example.com/users/123`
-- `https://api.example.com/products/laptops`
-- `https://api.example.com/countries/USA/cities/NewYork`
+- **Example**:
+  ```
+  https://api.example.com/users/123
+  ```
+  - Is URL me `123` ek path parameter hai jo specific user ko identify karta hai.
 
-In these examples:
-- `123`, `laptops`, `USA`, and `NewYork` are path parameters representing unique identifiers or resource names.
+### Query Parameters
 
-### Combining URL Components
+Query parameters URL ke end me `?` se start hote hain aur key-value pairs me hote hain, jo additional data provide karte hain request ke context me. Multiple query parameters `&` se separate hote hain.
 
-URLs often combine multiple components to specify a complete address for accessing resources. Here's an example combining scheme, host, path, and query parameters:
+- **Example**:
+  ```
+  https://www.example.com/search?query=web&sort=asc
+  ```
+  - Is URL me `query=web` aur `sort=asc` query parameters hain jo search query aur sorting order specify karte hain.
 
-- `https://api.example.com/products/laptops?category=electronics&price_range=100-500`
+### Path Aur Query Parameters Ka Usage
 
-In this URL:
-- `https` is the scheme.
-- `api.example.com` is the host.
-- `/products/laptops` is the path.
-- `category=electronics&price_range=100-500` are query parameters.
+- **Path Parameters**:
+  - Specific resources ya entities ko uniquely identify karte hain.
+  - Example: `/products/456` (Product ID `456` ko identify karta hai).
+
+- **Query Parameters**:
+  - Filtering, sorting, aur additional data specify karne ke liye use hote hain.
+  - Example: `/products?category=books&sort=price` (Books category filter aur price sorting specify karta hai).
+
+### URL, Path, Aur Query Parameters Ke Fayde
+
+- **Clarity**: URLs resources aur actions ko clearly represent karte hain, jo understanding aur debugging ko easier banata hai.
+- **Flexibility**: Query parameters dynamic data provide karne ke liye flexible aur powerful tarika hain bina resource path change kiye.
+- **Modularity**: Path parameters URL structure ko modular aur clean banate hain, jo readability aur maintainability improve karta hai.
 
 ### Conclusion
 
-Understanding URL, query parameters, and path parameters is fundamental for navigating and interacting with resources on the web. URL components work together to specify the location of resources and provide mechanisms for passing data to servers. Whether you're building APIs, developing web applications, or troubleshooting network issues, grasping these concepts will empower you to effectively utilize and navigate the vast landscape of the internet.
+URL, path parameters, aur query parameters web navigation aur resource identification ka fundamental part hain. Inke correct usage se developers clear aur efficient communication setup kar sakte hain between clients aur servers. URLs ko samjho, path aur query parameters ko effectively use karo, aur apni web applications ko powerful aur user-friendly banao! 🌐🚀
