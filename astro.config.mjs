@@ -20,8 +20,8 @@ export default defineConfig({
           autogenerate: { directory: "API Design" },
         },
         {
-          label: "Vite",
-          autogenerate: { directory: "vite-docs" },
+          label: "React",
+          autogenerate: { directory: "React" },
         },
       ],
     }),
