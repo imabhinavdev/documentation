@@ -17,12 +17,16 @@ export default defineConfig({
         {
           label: "API Design",
 
-          autogenerate: { directory: "API Design" },
+          autogenerate: { directory: "01 API Design" },
         },
         {
           label: "React",
-          autogenerate: { directory: "React" },
+          autogenerate: { directory: "02 React" },
         },
+        {
+          label:"Practice Sheets",
+          autogenerate: { directory: "03 Practice Sheets" }
+        }
       ],
     }),
   ],
