@@ -9,6 +9,21 @@ export default defineConfig({
       social: {
         github: "https://github.com/imabhinavdev",
       },
+      head: [
+        {
+          tag: 'script',
+          attributes: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-BTJPBQKFW0' },
+        },
+        {
+          tag: 'script',
+          children: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BTJPBQKFW0');
+          `,
+        },
+      ],
       sidebar: [
         {
           label: "Getting Started",
@@ -16,7 +31,6 @@ export default defineConfig({
         },
         {
           label: "API Design",
-
           autogenerate: { directory: "01 API Design" },
         },
         {
@@ -24,10 +38,11 @@ export default defineConfig({
           autogenerate: { directory: "02 React" },
         },
         {
-          label:"Practice Sheets",
+          label: "Practice Sheets",
           autogenerate: { directory: "03 Practice Sheets" }
         }
       ],
+
     }),
   ],
 });
