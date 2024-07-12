@@ -1,5 +1,7 @@
 {
-  "name": "",
+  "name": "documentation",
+  "description": "Documentation for Technologies in Hinglish",
+  "author": "Abhinav Singh",
   "type": "module",
   "version": "0.0.1",
   "scripts": {

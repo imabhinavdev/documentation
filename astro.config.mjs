@@ -12,11 +12,11 @@ export default defineConfig({
       head: [
         {
           tag: 'script',
-          attributes: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-BTJPBQKFW0' },
+          attrs: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-BTJPBQKFW0' },
         },
         {
           tag: 'script',
-          children: `
+          content: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
