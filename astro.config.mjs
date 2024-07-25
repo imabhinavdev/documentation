@@ -40,6 +40,10 @@ export default defineConfig({
         {
           label: "Practice Sheets",
           autogenerate: { directory: "03 Practice Sheets" }
+        },
+        {
+          label: "Other Resources",
+          autogenerate: { directory: "04 Other Study Material" }
         }
       ],
 
