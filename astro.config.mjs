@@ -57,6 +57,11 @@ export default defineConfig({
           autogenerate: { directory: "05 Other Study Material" },
           collapsed: true,
         },
+        {
+          label: "Docker",
+          autogenerate: { directory: "06 Docker" },
+          collapsed: true,
+        },
       ],
     }),
   ],
